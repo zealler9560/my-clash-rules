@@ -1,0 +1,23 @@
+# 自定义抖音分流规则
+# 更新时间：2026-02-07
+# 包含：直播流、视频CDN、API、静态资源
+
+# === 核心漏网之鱼 (根据日志补充) ===
+DOMAIN-SUFFIX,zjcdn.com
+DOMAIN-SUFFIX,bytegecko.com
+DOMAIN-SUFFIX,ecombdimg.com
+DOMAIN-SUFFIX,bdurl.net
+DOMAIN-SUFFIX,kuiniuca.com
+DOMAIN-SUFFIX,qishui.com
+DOMAIN-SUFFIX,zijieapi.com
+
+# === 抖音核心域名 ===
+DOMAIN-SUFFIX,amemv.com
+DOMAIN-SUFFIX,douyinstatic.com
+DOMAIN-SUFFIX,douyinpic.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,iesdouyin.com
+DOMAIN-SUFFIX,douyincdn.com
+DOMAIN-SUFFIX,douyin.com
+DOMAIN-SUFFIX,douyinliving.com
+DOMAIN-KEYWORD,douyin
