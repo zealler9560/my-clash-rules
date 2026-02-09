@@ -1,0 +1,11 @@
+# Kuaishou / Kwai Rules
+# 包含快手、快手极速版、Kwai
+DOMAIN-SUFFIX,kuaishou.com
+DOMAIN-SUFFIX,gifshow.com
+DOMAIN-SUFFIX,yximgs.com
+DOMAIN-SUFFIX,ksapis.com
+DOMAIN-SUFFIX,kwai.com
+DOMAIN-SUFFIX,kwai.net
+DOMAIN-SUFFIX,kwaimobile.com
+DOMAIN-KEYWORD,kuaishou
+DOMAIN-KEYWORD,gifshow
