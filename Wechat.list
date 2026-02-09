@@ -1,0 +1,13 @@
+# WeChat Rules
+# 包含微信、WeChat、微信支付、小程序基础
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,weixin.com
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,servicewechat.com
+DOMAIN-SUFFIX,wechatpay.com
+DOMAIN-SUFFIX,wechatlegal.net
+DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,qlogo.cn
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-KEYWORD,wechat
+DOMAIN-KEYWORD,weixin
