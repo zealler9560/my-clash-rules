@@ -1,0 +1,7 @@
+# Talkin Rules
+# 预设规则，建议抓包补充
+DOMAIN-SUFFIX,talkin.com
+DOMAIN-SUFFIX,talkin.cc
+DOMAIN-SUFFIX,talkin.net
+DOMAIN-KEYWORD,talkin
+# 如果该应用使用了 Google 或 Facebook 登录/服务，可能还需要走相关规则
