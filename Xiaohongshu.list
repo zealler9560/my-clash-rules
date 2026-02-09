@@ -1,0 +1,8 @@
+# Xiaohongshu Rules
+# 包含小红书 app 及网页版
+DOMAIN-SUFFIX,xiaohongshu.com
+DOMAIN-SUFFIX,xhscdn.com
+DOMAIN-SUFFIX,xhscdn.net
+DOMAIN-SUFFIX,xhslink.com
+DOMAIN-SUFFIX,qianfan.com
+DOMAIN-KEYWORD,xiaohongshu
