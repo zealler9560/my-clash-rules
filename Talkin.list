@@ -27,8 +27,3 @@ IP-CIDR,162.14.17.129/32,no-resolve
 # > 潜在的 UDP 节点 (抓包中出现的 UDP 流量)
 IP-CIDR,120.53.64.253/32,no-resolve
 
-# > 社交平台依赖 (可选)
-# 抓包中出现 graph.facebook.com (400 错误)，如需使用 FB 登录/分享请确保相关规则生效
-# 通常由 Facebook 规则集接管，此处注释掉避免冲突
-# DOMAIN-SUFFIX,facebook.com
-# DOMAIN-SUFFIX,facebook.net
