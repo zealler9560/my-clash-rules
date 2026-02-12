@@ -28,5 +28,5 @@ DOMAIN,ad-r.soulapp.cn
 # --- 关联第三方服务 (按需添加) ---
 # 截图显示 Soul 调用了百度地图 SDK (onloc.map.baidu.com)
 # 若希望 Soul 的地图功能也走相同策略，可考虑添加：
-DOMAIN,onloc.map.baidu.com
-DOMAIN,api.map.baidu.com
+#DOMAIN,onloc.map.baidu.com
+#DOMAIN,api.map.baidu.com
