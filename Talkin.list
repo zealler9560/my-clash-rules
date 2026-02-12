@@ -1,7 +1,34 @@
-# Talkin Rules
-# 预设规则，建议抓包补充
+# Talkin App Rules
+# Updated: 2026-02-12
+# Based on: User Preset & HttpCanary Capture
+
+# > 核心域名 (抓包发现主要流量走 .com.cn)
+DOMAIN-SUFFIX,talkin.com.cn
 DOMAIN-SUFFIX,talkin.com
 DOMAIN-SUFFIX,talkin.cc
 DOMAIN-SUFFIX,talkin.net
+
+# > 关键词匹配 (兜底)
 DOMAIN-KEYWORD,talkin
-# 如果该应用使用了 Google 或 Facebook 登录/服务，可能还需要走相关规则
+
+# > 第三方服务依赖 (归因与深度链接)
+# 抓包中出现了 www.allapp.link 的请求，用于 App 跳转和事件统计
+DOMAIN,www.allapp.link
+
+# > 腾讯云 IM / 长连接服务器 (TCP 9950 端口)
+# 抓包显示 App 直连这些 IP 进行通讯，建议保留以防消息延迟
+IP-CIDR,43.153.238.215/32,no-resolve
+IP-CIDR,43.173.131.110/32,no-resolve
+IP-CIDR,43.173.152.221/32,no-resolve
+
+# > 配置下发 / HTTPDNS 服务
+IP-CIDR,162.14.17.129/32,no-resolve
+
+# > 潜在的 UDP 节点 (抓包中出现的 UDP 流量)
+IP-CIDR,120.53.64.253/32,no-resolve
+
+# > 社交平台依赖 (可选)
+# 抓包中出现 graph.facebook.com (400 错误)，如需使用 FB 登录/分享请确保相关规则生效
+# 通常由 Facebook 规则集接管，此处注释掉避免冲突
+# DOMAIN-SUFFIX,facebook.com
+# DOMAIN-SUFFIX,facebook.net
