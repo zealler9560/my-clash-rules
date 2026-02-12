@@ -1,6 +1,32 @@
-# Soul App Rules
+#2026.2.12抓包后更新
+# --- Soul 官方域名 ---
 DOMAIN-SUFFIX,soulapp.cn
 DOMAIN-SUFFIX,soulapp.com
 DOMAIN-SUFFIX,soulapp-inc.cn
 DOMAIN-SUFFIX,soul.cn
 DOMAIN-KEYWORD,soulapp
+
+# --- 静态资源与图片 CDN ---
+# 截图显示存在 china-img.soulapp.cn 等子域名
+DOMAIN-SUFFIX,soulapp.it
+
+# --- 核心依赖与数据上报 (抓包可见) ---
+# 对应截图中的 data-collector.soulapp.cn 及 increase-openapi.soulapp.cn
+DOMAIN,data-collector.soulapp.cn
+DOMAIN,increase-openapi.soulapp.cn
+DOMAIN,base-growth.soulapp.cn
+
+# --- 支付与权限相关 (抓包可见) ---
+# 对应截图中的 api-pay.soulapp.cn
+DOMAIN,api-pay.soulapp.cn
+
+# --- 广告与行为监测 (抓包可见) ---
+# 对应截图中的 ssp.soulapp.cn (Soul 广告平台)
+DOMAIN,ssp.soulapp.cn
+DOMAIN,ad-r.soulapp.cn
+
+# --- 关联第三方服务 (按需添加) ---
+# 截图显示 Soul 调用了百度地图 SDK (onloc.map.baidu.com)
+# 若希望 Soul 的地图功能也走相同策略，可考虑添加：
+DOMAIN,onloc.map.baidu.com
+DOMAIN,api.map.baidu.com
