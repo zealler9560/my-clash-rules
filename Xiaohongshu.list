@@ -38,9 +38,9 @@ DOMAIN-SUFFIX,tlivemcdn.com
 
 # --- 6. 归因与社交依赖 ---
 # 日志中 eoktv7 相关的 AppsFlyer 归因和 Facebook SDK
-DOMAIN-SUFFIX,appsflyersdk.com
-DOMAIN-SUFFIX,facebook.com
-DOMAIN-SUFFIX,graph.facebook.com
+#DOMAIN-SUFFIX,appsflyersdk.com
+#DOMAIN-SUFFIX,facebook.com
+#DOMAIN-SUFFIX,graph.facebook.com
 
 # --- 7. HTTPDNS 与 腾讯云依赖 (日志 14, 81 重点发现) ---
 # 小红书强制通过 HTTP 协议向腾讯云 DNS 节点请求解析
