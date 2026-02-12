@@ -1,8 +1,50 @@
-# Xiaohongshu Rules
-# 包含小红书 app 及网页版
+#2026.2.12更新
+# --- 1. 官方核心与业务域名 ---
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-SUFFIX,xhscdn.com
 DOMAIN-SUFFIX,xhscdn.net
 DOMAIN-SUFFIX,xhslink.com
 DOMAIN-SUFFIX,qianfan.com
 DOMAIN-KEYWORD,xiaohongshu
+
+# --- 2. 关键业务逻辑接口 (日志新增) ---
+# 涉及：edith (开屏/实验)、as (配置/注册)、gslb (动态调度)、ci (图标资源)
+DOMAIN,edith.xiaohongshu.com
+DOMAIN,as.xiaohongshu.com
+DOMAIN,gslb.xiaohongshu.com
+DOMAIN,ci.xiaohongshu.com
+DOMAIN,mediacloud.xiaohongshu.com
+
+# --- 3. 高频数据上报与监控 (日志重灾区) ---
+# 日志中 13, 16, 21, 31, 116 等大量 POST 请求
+DOMAIN,t2.xiaohongshu.com
+DOMAIN,apm-native.xiaohongshu.com
+DOMAIN,collect.xiaohongshu.com
+DOMAIN,lng.xiaohongshu.com
+DOMAIN,spider-tracker.xiaohongshu.com
+DOMAIN,modelportrait.xiaohongshu.com
+
+# --- 4. 静态资源与前端渲染 (日志新增) ---
+# 包含大量 fe-platform 和 picasso 动态加载组件
+DOMAIN,picasso-static.xiaohongshu.com
+DOMAIN,fe-platform.xiaohongshu.com
+DOMAIN,fe-static.xhscdn.com
+DOMAIN-SUFFIX,xhscdn.com
+
+# --- 5. 第三方图片/CDN 存储 (日志 124-127 重点发现) ---
+# 日志中出现了 ahdohpiechei.com 这一类随机生成的 CDN 后缀，建议后缀匹配
+DOMAIN-SUFFIX,ahdohpiechei.com
+DOMAIN-SUFFIX,tlivemcdn.com
+
+# --- 6. 归因与社交依赖 ---
+# 日志中 eoktv7 相关的 AppsFlyer 归因和 Facebook SDK
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,graph.facebook.com
+
+# --- 7. HTTPDNS 与 腾讯云依赖 (日志 14, 81 重点发现) ---
+# 小红书强制通过 HTTP 协议向腾讯云 DNS 节点请求解析
+IP-CIDR,119.29.29.88/32,no-resolve
+IP-CIDR,119.29.29.90/32,no-resolve
+IP-CIDR,175.27.147.188/32,no-resolve
+IP-CIDR,101.67.20.240/32,no-resolve
