@@ -1,4 +1,4 @@
-#2026.2.12更新
+#2026.2.13更新
 # --- 1. 官方核心与业务域名 ---
 DOMAIN-SUFFIX,xiaohongshu.com
 DOMAIN-SUFFIX,xhscdn.com
@@ -48,3 +48,36 @@ IP-CIDR,119.29.29.88/32,no-resolve
 IP-CIDR,119.29.29.90/32,no-resolve
 IP-CIDR,175.27.147.188/32,no-resolve
 IP-CIDR,101.67.20.240/32,no-resolve
+
+# =======================================================
+# 小红书 iOS 专项增量补全 (针对 2026.2.13 差异化总结)
+# =======================================================
+
+# --- A. iOS 专属内容分发 (解决图片/视频转圈) ---
+# iOS 版在高并发下会启用这些特定的静态与视频域名
+DOMAIN-SUFFIX,xhsstatic.com
+DOMAIN-SUFFIX,xhspic.com
+DOMAIN-SUFFIX,xhsvideo.com
+DOMAIN-SUFFIX,redbook.com        # 早期域名，iOS 端部分接口仍有调用
+
+# --- B. 关键业务与实验配置 (iOS 侧重) ---
+# ark 是 iOS 端权限校验和 A/B 测试配置的核心
+DOMAIN,ark.xiaohongshu.com
+DOMAIN,shis.xiaohongshu.com
+DOMAIN,p-collect.xiaohongshu.com # 增强型上报接口
+
+# --- C. 跨平台 SDK 依赖 (iOS 滤镜与视频优化) ---
+# 小红书 iOS 版深度集成了字节跳动的火山引擎 SDK 用于视频和特效
+DOMAIN-SUFFIX,byteeffect.com     # 滤镜与特效 SDK
+DOMAIN-SUFFIX,volcengine.com     # 火山引擎视频云
+DOMAIN-SUFFIX,volces.com         # 内容分发调度
+DOMAIN-SUFFIX,alicdn.com         # 阿里 CDN (部分笔记图片托管)
+
+# --- D. 安全风控与崩溃监控 (iOS 特有) ---
+DOMAIN,security-tracker.xiaohongshu.com
+DOMAIN,crashlytics.com           # Google/Apple 体系常用的崩溃分析
+DOMAIN,app-measurement.com       # iOS 统计分析
+
+# --- E. 补充 HTTPDNS 节点 (2026 最新发现) ---
+# 字节系与腾讯系混用的 DNS 解析 IP
+IP-CIDR,180.184.203.0/24,no-resolve
