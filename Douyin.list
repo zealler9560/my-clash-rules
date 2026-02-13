@@ -1,5 +1,5 @@
 # 自定义抖音分流规则
-# 更新时间：2026-02-07
+# 更新时间：2026-02-13
 # 包含：直播流、视频CDN、API、静态资源
 
 # === 核心漏网之鱼 (根据日志补充) ===
@@ -21,3 +21,23 @@ DOMAIN-SUFFIX,douyincdn.com
 DOMAIN-SUFFIX,douyin.com
 DOMAIN-SUFFIX,douyinliving.com
 DOMAIN-KEYWORD,douyin
+
+#增加苹果端漏网之鱼
+#核心视频流与 CDN (iOS 高频使用)
+DOMAIN-SUFFIX,bytev.com         # 核心视频流域名，iOS 极其依赖
+DOMAIN-SUFFIX,bytev04.com       # 备用视频流
+DOMAIN-SUFFIX,bytev4.com        # 备用视频流
+DOMAIN-SUFFIX,volces.com        # 火山引擎 (字节云)，iOS 端分发配置的关键
+DOMAIN-SUFFIX,vopstatp.com      # 静态资源分发
+
+#补全 API 与 SDK 关联域名
+DOMAIN-SUFFIX,pstatp.com        # 字节跳动核心静态资源/配置域名
+DOMAIN-SUFFIX,byteimg.com       # 图片、头像加载
+DOMAIN-SUFFIX,bytedance.com     # 字节母公司域名，部分鉴权会用到
+DOMAIN-SUFFIX,toutiaoapi.com    # 早期头条系 SDK 残留，iOS 仍有调用
+DOMAIN-SUFFIX,ixigua.com        # 西瓜视频与抖音内容互通的域名
+
+#直播与特殊业务
+DOMAIN-SUFFIX,douyinpay.com     # 抖音支付
+DOMAIN-SUFFIX,byteintl.com      # 部分国际化组件调用
+DOMAIN-SUFFIX,zijieapi.com      # (你规则中已有，建议确保覆盖 sub-domain)
