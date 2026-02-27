@@ -1,0 +1,10 @@
+# Reddit 规则集 - 适用于 OpenClash
+# 包含主站、图片、视频及静态资源
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redditstatic.com
+DOMAIN-SUFFIX,redd.it
+DOMAIN-KEYWORD,reddit
+# 视频及图片 CDN
+DOMAIN,v.redd.it
+DOMAIN,i.redd.it
