@@ -53,10 +53,10 @@ s: &s
   prefer-asn: true
 
 proxy-providers:
-  Substore-main:
+  本地聚合:
     <<: *p
     
-    path: ./proxy_provider/Substore-main.yaml
+    path: ./proxy_provider/本地聚合.yaml
     url: "http://127.0.0.1:3000/download/collection/mynodes"
   
     
