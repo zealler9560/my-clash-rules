@@ -57,6 +57,8 @@ proxy-providers:
     <<: *p
     path: ./proxy_provider/GCP.yaml
     url: "http://127.0.0.1:3000/download/GCP"
+    override:
+      dialer-proxy: GCP中转组
 
   非GCP:
     <<: *p
@@ -206,10 +208,9 @@ proxy-groups:
     use:
       - 非GCP
 
-  - name: GCP落地组
+  - name: GCP
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/google.png"
     type: select
-    dialer-proxy: GCP中转组
     use:
       - GCP
 
