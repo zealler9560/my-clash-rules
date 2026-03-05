@@ -55,8 +55,7 @@ s: &s
 proxy-providers:
   Substore-main:
     <<: *p
-    override:
-      additional-prefix: "" #节点前缀名
+    
     path: ./proxy_provider/Substore-main.yaml
     url: "http://127.0.0.1:3000/download/collection/mynodes"
   
