@@ -55,9 +55,18 @@ s: &s
 proxy-providers:
   本地聚合:
     <<: *p
-    
     path: ./proxy_provider/本地聚合.yaml
     url: "http://127.0.0.1:3000/download/collection/mynodes"
+
+  GCP:
+    <<: *p
+    path: ./proxy_provider/GCP.yaml
+    url: "http://127.0.0.1:3000/download/GCP"
+
+  非GCP:
+    <<: *p
+    path: ./proxy_provider/except-GCP.yaml
+    url: "http://127.0.0.1:3000/download/collection/except-GCP"
   
     
 #  proxy2:
@@ -197,13 +206,20 @@ proxy-groups:
       - 🇨🇳 本地直连
       - 总模式
 
-  - name: myGCP-nodes  # 谷歌云节点
+  - name: GCP中转组
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/google.png"
     type: select
-    filter: "^(?=.*(instance)).*$"
-    include-all-providers: true
-    <<: *s
-    
+    use:
+      - 非GCP
+
+  - name: GCP落地组
+    icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/google.png"
+    type: select
+    dialer-proxy: GCP中转组
+    use:
+      - GCP
+
+
   - name: AI
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/chatgpt(balck).png"
     <<: *app_groups
