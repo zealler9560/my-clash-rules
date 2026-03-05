@@ -192,7 +192,6 @@ proxy-groups:
       - 美国·智能
       - 其他地区·智能
       - 手动选择
-      - myGCP-nodes
       
   - name: 订阅更新
     icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/Update.png"
