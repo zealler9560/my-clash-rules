@@ -221,6 +221,18 @@ proxy-groups:
   - name: AI
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/chatgpt(balck).png"
     <<: *app_groups
+
+
+  - name: Telegram
+    icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/Telegram.png"
+    <<: *app_groups
+
+
+
+  - name: Google
+    icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/Google.png"
+    <<: *app_groups
+
   # 应用分流策略
   # === 插入开始：新增应用分组 ===
   - name: 抖音
@@ -265,9 +277,6 @@ proxy-groups:
     icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/Pixiv.png"
     <<: *app_groups
 
-  - name: Telegram
-    icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/Telegram.png"
-    <<: *app_groups
 
   - name: Emby
     icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/Emby.png"
@@ -292,11 +301,7 @@ proxy-groups:
   - name: Instagram
     icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/Instagram.png"
     <<: *app_groups
-
-  - name: Google
-    icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/Google.png"
-    <<: *app_groups
-
+  
   - name: GoogleFCM
     icon: "https://v6.gh-proxy.org/https://github.com/musiyun124/mihomo/raw/refs/heads/main/icon2/GoogleFCM.png"
     <<: *app_groups
