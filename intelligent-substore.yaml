@@ -205,6 +205,9 @@ proxy-groups:
   - name: GCP中转组
     icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/google.png"
     type: select
+    filter: "^(?=.*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan|港|HK|hk|Hong Kong|HongKong|hongkong|台|新北|彰化|TW|Taiwan|新加坡|坡|狮城|SG|Singapore|韩国|Korea)).*$"
+    proxies:
+      - DIRECT
     use:
       - 非GCP
 
